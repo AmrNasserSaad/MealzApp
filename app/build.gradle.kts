@@ -36,6 +36,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -62,6 +65,13 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation ("androidx.activity:activity-ktx:1.9.0")
+
+    //rv
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+    implementation ("com.github.bumptech.glide:glide:4.13.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.0")
 
     // to have a ref from domain layer and data layer in app layer
     // implementation project(path: ':domain') // this line is duplicated

@@ -7,7 +7,7 @@ import com.example.domain.repo.MealsRepo
 class MealsRepoImpl(private val apiService: ApiService) : MealsRepo {
 
     // to override the fun from the meals repo interface from domain layer
-    override fun getMealsFromRemote(): CategoryResponse = apiService.getMeals()
+    override suspend fun getMealsFromRemote(): CategoryResponse = apiService.getMeals()
 
 
 }
