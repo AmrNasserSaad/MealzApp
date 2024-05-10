@@ -11,6 +11,7 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 object UseCaseModule {
 
+    // use case  depend on repo
     @Provides
     fun provideUseCase(mealsRepo: MealsRepo): GetMealz {
 

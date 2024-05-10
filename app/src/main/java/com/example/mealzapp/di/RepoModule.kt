@@ -12,6 +12,7 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 object RepoModule {
 
+    // Repo depend on Api Service
     @Provides
     fun provideRepo(apiService: ApiService): MealsRepo {
 

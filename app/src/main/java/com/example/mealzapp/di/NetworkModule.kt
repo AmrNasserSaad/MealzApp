@@ -15,6 +15,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    // okHttp depend on nothing
     @Provides
     @Singleton
     fun provideOkHttp(): OkHttpClient {
@@ -24,6 +25,7 @@ object NetworkModule {
             .build()
     }
 
+    // retrofit depend on okHttp
     @Provides
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
@@ -34,6 +36,7 @@ object NetworkModule {
             .build()
     }
 
+    // Api Service depend on retrofit
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): ApiService {
